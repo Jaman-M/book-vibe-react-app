@@ -1,13 +1,13 @@
+import { Outlet } from "react-router-dom";
+import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar";
 
 const Root = () => {
     return (
         <div>
-            <h2>showing from root</h2>
-            <button className="btn">Button</button>
-            
-            <button className="btn btn-accent">Accent</button>
-            <button className="btn btn-ghost">Ghost</button>
-            <button className="btn btn-link">Link</button>
+            <NavBar></NavBar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
