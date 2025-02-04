@@ -12,6 +12,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import Dashboadr from './components/Dashboard/Dashboadr';
 import BookDetail from './components/BookDetail/BookDetail';
+import ListedBooks from './components/ListedBooks/ListedBooks';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,15 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <Dashboadr></Dashboadr>
+      },
+      {
+        path: 'listedBooks',
+        element: <ListedBooks></ListedBooks>,
+        // worst way to load data. used for understand some logic only
+        loader: () => fetch('/booksData.json')
+      },
+      {
+
       },
       {
         path: 'books/:bookId',
